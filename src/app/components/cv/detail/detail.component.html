@@ -1,0 +1,21 @@
+<div class="rounded-lg text-white bg-[#2596be] w-96 overflow-hidden">
+  <div class="relative h-48 flex justify-center items-center">
+    <div class="absolute inset-0 w-full h-1/2"></div>
+    <img
+      class="h-36 shadow-lg aspect-square rounded-full bg-[#2596be] z-10"
+      [src]="person?.image"
+    />
+  </div>
+  <h1 class="text-3xl font-bold text-center">
+    {{ person?.firstname }} {{ person?.lastname }}
+  </h1>
+  <h3 class="text-lg text-center text-white">
+    {{ person?.job }}
+  </h3>
+  <div class="px-5 pb-5 text-center">
+    <p>{{ person?.age }}</p>
+    <p>
+      {{ person?.description }}
+    </p>
+  </div>
+</div>

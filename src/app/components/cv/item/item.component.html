@@ -1,0 +1,19 @@
+<div
+  [ngClass]="{
+    'hover:bg-lightgray hover:scale-105 cursor-pointer': isHoverable
+  }"
+  class="flex gap-5 transition-all items-center m-5 px-5 py-3 w-80 bg-[#2596be] rounded-full"
+  (click)="selectPerson()"
+>
+  <div class="rounded-full aspect-square overflow-hidden h-20">
+    <!-- <img [src]="candidate?.image | defaultImage" /> -->
+    <img [src]="person?.image" />
+  </div>
+  <div class="text-white">
+    <p class="font-medium text-lg">
+      {{ person?.firstname }} {{ person?.lastname }}
+    </p>
+    <p class="text-sm">{{ person?.age }}</p>
+    <p class="text-sm">{{ person?.job }}</p>
+  </div>
+</div>

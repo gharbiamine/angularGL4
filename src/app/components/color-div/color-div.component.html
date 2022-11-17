@@ -1,0 +1,23 @@
+<div class="flex gap-20 items-center text-3xl px-20 py-5">
+  <div class="h-20 w-20" [style.backgroundColor]="color"></div>
+  <input
+    [(ngModel)]="color"
+    shadow
+    appearance-none
+    border-rounded
+    w-full
+    py-2
+    px-2
+    text-gray-700
+    leading-tight
+    focus:outline-none
+    focus:shadow-outline
+    placeholder="Type a color"
+  />
+  <button
+    (click)="resetColor()"
+    class="bg-red-600 text-white px-2 py-2 rounded"
+  >
+    Reset Color
+  </button>
+</div>
