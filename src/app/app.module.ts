@@ -10,6 +10,7 @@ import { DetailComponent } from './components/cv/detail/detail.component';
 import { ListComponent } from './components/cv/list/list.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { ItemComponent } from './components/cv/item/item.component';
+import { RainbowComponent } from './components/rainbow/rainbow.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ItemComponent } from './components/cv/item/item.component';
     ListComponent,
     CvComponent,
     ItemComponent,
+    RainbowComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

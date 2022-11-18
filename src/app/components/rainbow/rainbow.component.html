@@ -1,0 +1,38 @@
+<div>
+  <div
+    class="text-3xl m-5"
+    [ngStyle]="{
+      color: color,
+      'font-family': fontFamily,
+      'font-size': fontSize + 'px'
+    }"
+  >
+    Sample text
+  </div>
+  <div class="flex gap-52 items-center m-5 px-5 py-3 w-100">
+    <input
+      type="color"
+      [(ngModel)]="color"
+      class="border-2 border-gray-300 p-2 rounded-lg w-96 h-10"
+    />
+    <input
+      type="number"
+      min="10"
+      [(ngModel)]="fontSize"
+      class="border-2 border-gray-300 p-2 rounded-lg w-96 h-10"
+    />
+    <select
+      class="border-2 border-gray-300 p-2 rounded-lg w-96 h-10"
+      [(ngModel)]="fontFamily"
+    >
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Comic Sans MS">Comic Sans MS</option>
+      <option value="Impact">Impact</option>
+      <option value="Lucida Console">Lucida Console</option>
+      <option value="Tahoma">Tahoma</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+  </div>
+</div>
