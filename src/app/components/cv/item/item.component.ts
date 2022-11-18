@@ -7,23 +7,12 @@ import { Person } from 'src/app/cv/model/person.model';
   styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
-  public hovered: boolean;
-  @Input() isHoverable = false;
   @Input() person: Person | undefined;
   @Output() sendPerson = new EventEmitter();
-  constructor() {
-    this.hovered = false;
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
-  onMouseEnter() {
-    this.hovered = true;
-  }
-
-  onMouseLeave() {
-    this.hovered = false;
-  }
   selectPerson() {
     this.sendPerson.emit(this.person);
   }

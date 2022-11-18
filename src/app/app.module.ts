@@ -10,7 +10,8 @@ import { DetailComponent } from './components/cv/detail/detail.component';
 import { ListComponent } from './components/cv/list/list.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { ItemComponent } from './components/cv/item/item.component';
-import { RainbowComponent } from './components/rainbow/rainbow.component';
+import { WordSimilatorComponent } from './components/word-similator/word-similator.component';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RainbowComponent } from './components/rainbow/rainbow.component';
     ListComponent,
     CvComponent,
     ItemComponent,
-    RainbowComponent,
+    WordSimilatorComponent,
+    RainbowDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
