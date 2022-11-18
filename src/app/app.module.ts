@@ -12,6 +12,7 @@ import { CvComponent } from './pages/cv/cv.component';
 import { ItemComponent } from './components/cv/item/item.component';
 import { WordSimilatorComponent } from './components/word-similator/word-similator.component';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RainbowDirective } from './directives/rainbow.directive';
     ItemComponent,
     WordSimilatorComponent,
     RainbowDirective,
+    DefaultImagePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

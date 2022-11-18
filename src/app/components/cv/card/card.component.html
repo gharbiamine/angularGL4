@@ -2,7 +2,7 @@
   class="flex gap-5 transition-all items-center px-5 py-2 w-80 bg-[#2596be] shadow-2xl rounded-lg"
 >
   <div class="rounded-full overflow-hidden aspect-square h-20">
-    <img [src]="person?.image" />
+    <img src="assets/images/{{ person?.image | defaultImage }}" />
   </div>
   <div class="text-gray-300">
     <p class="font-medium text-lg">

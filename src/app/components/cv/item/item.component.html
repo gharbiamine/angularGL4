@@ -3,8 +3,7 @@
   (click)="selectPerson()"
 >
   <div class="rounded-full aspect-square overflow-hidden h-20">
-    <!-- <img [src]="candidate?.image | defaultImage" /> -->
-    <img [src]="person?.image" />
+    <img src="assets/images/{{ person?.image | defaultImage }}" />
   </div>
   <div class="text-white">
     <p class="font-medium text-lg">
