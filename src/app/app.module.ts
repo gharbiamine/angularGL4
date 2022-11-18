@@ -15,6 +15,7 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { WordSimulatorComponent } from './components/word-simulator/word-simulator.component';
 import { HiredComponent } from './components/cv/hired/hired.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,12 @@ import { HiredComponent } from './components/cv/hired/hired.component';
     DefaultImagePipe,
     HiredComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
