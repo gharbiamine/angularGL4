@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-word-similator',
-  templateUrl: './word-similator.component.html',
-  styleUrls: ['./word-similator.component.css'],
+  selector: 'app-word-simulator',
+  templateUrl: './word-simulator.component.html',
+  styleUrls: ['./word-simulator.component.css'],
 })
-export class WordSimilatorComponent implements OnInit {
+export class WordSimulatorComponent implements OnInit {
   text: string;
   color: string;
   fontFamily: string;

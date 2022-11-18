@@ -10,9 +10,11 @@ import { DetailComponent } from './components/cv/detail/detail.component';
 import { ListComponent } from './components/cv/list/list.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { ItemComponent } from './components/cv/item/item.component';
-import { WordSimilatorComponent } from './components/word-similator/word-similator.component';
+
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { WordSimulatorComponent } from './components/word-simulator/word-simulator.component';
+import { HiredComponent } from './components/cv/hired/hired.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     ListComponent,
     CvComponent,
     ItemComponent,
-    WordSimilatorComponent,
+    WordSimulatorComponent,
     RainbowDirective,
     DefaultImagePipe,
+    HiredComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
