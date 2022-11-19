@@ -4,10 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'defaultImage',
 })
 export class DefaultImagePipe implements PipeTransform {
-  transform(value: string | undefined, ...args: unknown[]): string {
-    if (!value?.trim()) {
+  transform(path: string | undefined): string {
+    if (!path?.trim()) {
       return 'default.jpg';
     }
-    return value;
+    return path;
   }
 }

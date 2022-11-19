@@ -1,0 +1,41 @@
+<div class="2xl:container 2xl:mx-auto">
+  <div class="bg-white rounded shadow-lg py-5 px-7">
+    <nav class="flex justify-between">
+      <ul class="hidden md:flex flex-auto space-x-2 space-around">
+        <li
+          (click)="isToggle = 1"
+          [ngClass]="
+            'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xl leading-3 shadow-md rounded ' +
+            (isToggle === 1
+              ? 'text-white bg-indigo-600'
+              : 'text-gray-600 border border-white bg-gray-50')
+          "
+        >
+          <a routerLink="/cv">CV Page </a>
+        </li>
+        <li
+          (click)="isToggle = 2"
+          [ngClass]="
+            'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xl leading-3 shadow-md rounded ' +
+            (isToggle === 2
+              ? 'text-white bg-indigo-600'
+              : 'text-gray-600 border border-white bg-gray-50')
+          "
+        >
+          <a routerLink="/word-simulator">Word Simulator</a>
+        </li>
+        <li
+          (click)="isToggle = 3"
+          [ngClass]="
+            'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xl leading-3 shadow-md rounded ' +
+            (isToggle === 3
+              ? 'text-white bg-indigo-600'
+              : 'text-gray-600 border border-white bg-gray-50')
+          "
+        >
+          <a routerLink="/color-div">Color Changing Div</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -16,6 +16,8 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { WordSimulatorComponent } from './components/word-simulator/word-simulator.component';
 import { HiredComponent } from './components/cv/hired/hired.component';
 import { ToastrModule } from 'ngx-toastr';
+import { HeaderComponent } from './components/header/header.component';
+import { RouterComponent } from './components/router/router.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ToastrModule } from 'ngx-toastr';
     RainbowDirective,
     DefaultImagePipe,
     HiredComponent,
+    HeaderComponent,
+    RouterComponent,
   ],
   imports: [
     BrowserModule,
