@@ -17,7 +17,8 @@ import { WordSimulatorComponent } from './components/word-simulator/word-simulat
 import { HiredComponent } from './components/cv/hired/hired.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/header/header.component';
-import { RouterComponent } from './components/router/router.component';
+import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
+import { InfoComponent } from './pages/cv/info/info.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RouterComponent } from './components/router/router.component';
     DefaultImagePipe,
     HiredComponent,
     HeaderComponent,
-    RouterComponent,
+    RouterSimulatorComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

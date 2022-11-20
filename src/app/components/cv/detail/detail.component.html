@@ -18,12 +18,18 @@
       {{ person?.description }}
     </p>
   </div>
-  <div class="flex items-center justify-center py-5">
+  <div class="flex items-center justify-center py-5 space-x-2">
     <button
       (click)="hire()"
       class="bg-blue-700 text-white px-5 py-2 rounded-full shadow-lg"
     >
       {{ hiringService.isHired(person) ? "Fire" : "Hire" }}
+    </button>
+    <button
+      (click)="getDetails(person?.id)"
+      class="bg-blue-700 text-white px-5 py-2 rounded-full shadow-lg"
+    >
+      Detail
     </button>
   </div>
 </div>

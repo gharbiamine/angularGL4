@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Person } from 'src/app/cv/model/person.model';
 import { HiringService } from 'src/app/services/hiring.service';
@@ -12,7 +13,8 @@ export class DetailComponent implements OnInit {
   @Input() person: Person | undefined;
   constructor(
     public hiringService: HiringService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -25,5 +27,9 @@ export class DetailComponent implements OnInit {
         this.toastr.success('Person fired', 'Warning');
       }
     }
+  }
+  getDetails(id: number | undefined) {
+    console.log('navigating to cv/' + id);
+    this.router.navigate(['/cv-detail', id]);
   }
 }

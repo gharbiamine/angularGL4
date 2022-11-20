@@ -17,4 +17,13 @@ export class CvService {
   getPeople(): Person[] {
     return this.people;
   }
+  getPersonById(id: number | undefined): Person {
+    const person = this.people.find((person) => person.id == id);
+    if (person) return person;
+    return new Person(0, '', '', 0, '', '');
+  }
+  deletePerson(person: Person) {
+    const index = this.people.indexOf(person);
+    this.people.splice(index, 1);
+  }
 }
