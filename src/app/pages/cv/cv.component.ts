@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/app/cv/model/person.model';
 
 @Component({
@@ -9,10 +10,13 @@ import { Person } from 'src/app/cv/model/person.model';
 export class CvComponent implements OnInit {
   selectedPerson: Person | undefined;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
   catchPerson(person: Person) {
     this.selectedPerson = person;
+  }
+  handleAdd() {
+    this.router.navigate(['cv/add']);
   }
 }

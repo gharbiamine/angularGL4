@@ -35,6 +35,17 @@
         >
           <a routerLink="/color-div">Color Changing Div</a>
         </li>
+        <li
+          (click)="isToggle = 4"
+          [ngClass]="
+            'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xl leading-3 shadow-md rounded ' +
+            (isToggle === 4
+              ? 'text-white bg-[#2596be]'
+              : 'text-gray-600 border border-white bg-gray-50')
+          "
+        >
+          <a routerLink="/sign-in">Sign In</a>
+        </li>
       </ul>
     </nav>
   </div>

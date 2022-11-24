@@ -30,6 +30,6 @@ export class DetailComponent implements OnInit {
   }
   getDetails(id: number | undefined) {
     console.log('navigating to cv/' + id);
-    this.router.navigate(['/cv-detail', id]);
+    this.router.navigate(['/cv/detail', id]);
   }
 }

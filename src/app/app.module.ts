@@ -19,6 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
 import { InfoComponent } from './pages/cv/info/info.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { AddCvComponent } from './pages/add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { InfoComponent } from './pages/cv/info/info.component';
     HeaderComponent,
     RouterSimulatorComponent,
     InfoComponent,
+    SignInComponent,
+    AddCvComponent,
   ],
   imports: [
     BrowserModule,

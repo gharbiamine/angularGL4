@@ -12,7 +12,6 @@ export class RouterSimulatorComponent implements OnInit {
   ngOnInit(): void {}
   redirect(num: Number) {
     if (num == 0) {
-      console.log('here');
       this.router.navigate(['/cv']);
     }
     if (num == 1) {
@@ -20,6 +19,9 @@ export class RouterSimulatorComponent implements OnInit {
     }
     if (num == 2) {
       this.router.navigate(['/color-div']);
+    }
+    if (num == 3) {
+      this.router.navigate(['/sign-in']);
     }
   }
 }

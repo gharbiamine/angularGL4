@@ -22,6 +22,14 @@ export class CvService {
     if (person) return person;
     return new Person(0, '', '', 0, '', '');
   }
+  addPerson(person: Person) {
+    if (this.people.length > 0) {
+      person.id = this.people[this.people.length - 1].id + 1;
+    } else {
+      person.id = 1;
+    }
+    this.people.push(person);
+  }
   deletePerson(person: Person) {
     const index = this.people.indexOf(person);
     this.people.splice(index, 1);
