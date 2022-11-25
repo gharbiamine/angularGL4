@@ -1,0 +1,9 @@
+<div
+  class="relative h-48 flex justify-center items-center justify-around w-full"
+>
+  <img
+    *ngFor="let imageObservable of imageObservables"
+    class="h-36 shadow-lg aspect-square rounded-full"
+    src="assets/images/observable-flow/{{ imageObservable | async }}"
+  />
+</div>

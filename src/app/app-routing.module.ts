@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ColorDivComponent } from './components/color-div/color-div.component';
+import { ImageLoopComponent } from './components/image-loop/image-loop.component';
 import { WordSimulatorComponent } from './components/word-simulator/word-simulator.component';
 import { AddCvComponent } from './pages/add-cv/add-cv.component';
 import { CvComponent } from './pages/cv/cv.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'sign-in',
     component: SignInComponent,
+  },
+  {
+    path: 'image-loop',
+    component: ImageLoopComponent,
   },
   {
     path: '',

@@ -23,5 +23,8 @@ export class RouterSimulatorComponent implements OnInit {
     if (num == 3) {
       this.router.navigate(['/sign-in']);
     }
+    if (num == 4) {
+      this.router.navigate(['/image-loop']);
+    }
   }
 }

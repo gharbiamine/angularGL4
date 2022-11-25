@@ -21,6 +21,7 @@ import { RouterSimulatorComponent } from './components/router-simulator/router-s
 import { InfoComponent } from './pages/cv/info/info.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { AddCvComponent } from './pages/add-cv/add-cv.component';
+import { ImageLoopComponent } from './components/image-loop/image-loop.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AddCvComponent } from './pages/add-cv/add-cv.component';
     InfoComponent,
     SignInComponent,
     AddCvComponent,
+    ImageLoopComponent,
   ],
   imports: [
     BrowserModule,
