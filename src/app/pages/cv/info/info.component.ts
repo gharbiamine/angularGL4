@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Person } from 'src/app/cv/model/person.model';
 import { CvService } from 'src/app/services/cv.service';
+import { HiringService } from 'src/app/services/hiring.service';
 
 @Component({
   selector: 'app-info',
@@ -15,6 +16,7 @@ export class InfoComponent implements OnInit {
   constructor(
     private router: Router,
     private cvService: CvService,
+    private hiringService: HiringService,
     private route: ActivatedRoute
   ) {}
 
@@ -29,6 +31,9 @@ export class InfoComponent implements OnInit {
   }
   handleDeleteClick() {
     this.cvService.deletePerson(this.person!);
+    if (this.hiringService.isHired(this.person!)) {
+      this.hiringService.hireOrFirePerson(this.person!);
+    }
     this.router.navigate(['cv']);
   }
 }
