@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +11,8 @@ export class SignInComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  handleSubmit() {
+  handleSubmit(loginForm: NgForm) {
+    //TODO : add login logic
     this.router.navigate(['/cv']);
   }
 }
