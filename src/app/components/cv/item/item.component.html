@@ -3,13 +3,13 @@
   (click)="selectPerson()"
 >
   <div class="rounded-full aspect-square overflow-hidden h-20">
-    <img src="assets/images/{{ person?.image | defaultImage }}" />
+    <img src="assets/images/{{ person.image | defaultImage }}" />
   </div>
   <div class="text-white">
     <p class="font-medium text-lg">
-      {{ person?.firstname }} {{ person?.lastname }}
+      {{ person.firstname }} {{ person.lastname }}
     </p>
-    <p class="text-sm">{{ person?.age }}</p>
-    <p class="text-sm">{{ person?.job }}</p>
+    <p class="text-sm">{{ person.age }}</p>
+    <p class="text-sm">{{ person.job }}</p>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Person } from '../cv/model/person.model';
 
 @Injectable({
@@ -6,7 +7,7 @@ import { Person } from '../cv/model/person.model';
 })
 export class CvService {
   people: Person[] = [];
-
+  selectedPerson: Subject<Person> = new Subject<Person>();
   constructor() {
     this.people = [
       new Person(1, 'Amine', 'Gharbi', 22, 'SWE', 'amine.jpg'),
@@ -33,5 +34,8 @@ export class CvService {
   deletePerson(person: Person) {
     const index = this.people.indexOf(person);
     this.people.splice(index, 1);
+  }
+  selectPerson(person: Person) {
+    this.selectedPerson.next(person);
   }
 }

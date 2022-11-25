@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Person } from 'src/app/cv/model/person.model';
+import { CvService } from 'src/app/services/cv.service';
 
 @Component({
   selector: 'app-item',
@@ -7,13 +8,13 @@ import { Person } from 'src/app/cv/model/person.model';
   styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
-  @Input() person: Person | undefined;
-  @Output() sendPerson = new EventEmitter();
-  constructor() {}
+  @Input() person: Person;
+
+  constructor(private cvService: CvService) {}
 
   ngOnInit(): void {}
 
   selectPerson() {
-    this.sendPerson.emit(this.person);
+    this.cvService.selectPerson(this.person!);
   }
 }

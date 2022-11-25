@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { distinctUntilChanged } from 'rxjs';
 import { Person } from 'src/app/cv/model/person.model';
+import { CvService } from 'src/app/services/cv.service';
 import { HiringService } from 'src/app/services/hiring.service';
 
 @Component({
@@ -14,10 +16,15 @@ export class DetailComponent implements OnInit {
   constructor(
     public hiringService: HiringService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private cvService: CvService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cvService.selectedPerson
+      .pipe(distinctUntilChanged())
+      .subscribe((person) => (this.person = person));
+  }
   hire() {
     if (this.person) {
       this.hiringService.hireOrFirePerson(this.person);

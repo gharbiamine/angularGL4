@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { distinctUntilChanged, filter } from 'rxjs';
 import { Person } from 'src/app/cv/model/person.model';
+import { CvService } from 'src/app/services/cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -8,14 +10,11 @@ import { Person } from 'src/app/cv/model/person.model';
   styleUrls: ['./cv.component.css'],
 })
 export class CvComponent implements OnInit {
-  selectedPerson: Person | undefined;
-
+  selectedPerson: Person;
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  catchPerson(person: Person) {
-    this.selectedPerson = person;
-  }
+
   handleAdd() {
     this.router.navigate(['cv/add']);
   }

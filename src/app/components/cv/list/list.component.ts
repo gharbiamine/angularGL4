@@ -8,14 +8,10 @@ import { CvService } from 'src/app/services/cv.service';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
-  @Output() forwardedPerson = new EventEmitter();
   public people: Person[] = [];
   constructor(private cvService: CvService) {}
 
   ngOnInit(): void {
     this.people = this.cvService.getPeople();
-  }
-  forwardPerson(person: Person) {
-    this.forwardedPerson.emit(person);
   }
 }

@@ -14,7 +14,6 @@ export class ImageLoopComponent implements OnInit {
     return new Observable<string>((observer) => {
       let index = ind;
       setInterval(() => {
-        console.log(index);
         observer.next(this.images[index++ % this.images.length]);
       }, 1000);
     });
